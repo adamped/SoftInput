@@ -13,7 +13,7 @@ namespace SoftInput
         {
             InitializeComponent();
 
-            MainPage = new SoftInput.MainPage();
+            MainPage = new NavigationPage(new SoftInput.MainPage());
         }
 
         protected override void OnStart()

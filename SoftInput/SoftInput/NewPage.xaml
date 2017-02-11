@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoftInput.NewPage">
+    <ListView ItemsSource="{Binding TempList}">
+        IsGroupingEnabled="True"
+              GroupDisplayBinding="{Binding LongTitle}"
+                  >
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell Height="50" >
+                    <Grid AutomationId="grdDateRange" RowSpacing="0" BackgroundColor="{DynamicResource AssignmentListBackgroundColor}">
+                        <Label FontSize="Large"
+                     TextColor="{DynamicResource AssignmentListGroupingFontColor}"
+                     Text="{Binding LongTitle}"
+                     AutomationId="lblDateRange"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+    </ListView>
+</ContentPage>
